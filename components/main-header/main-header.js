@@ -3,11 +3,12 @@ import Image from "next/image";
 import logoImg from '@/assets/logo.png'
 import styles from './main-header.module.css'
 import MainHeaderBackground from "./main-heder-background";
+import NavLink from "./nav-link";
 
 export default function MainHeader() {
     return (
         <>
-            <MainHeaderBackground/>
+            <MainHeaderBackground />
             <header className={styles.header}>
                 <Link href="/" className={styles.logo}>
                     <Image src={logoImg} alt="A plate with food on it" priority />
@@ -16,8 +17,12 @@ export default function MainHeader() {
 
                 <nav className={styles.nav}>
                     <ul>
-                        <li> <Link href='/meals'>Browse meals</Link></li>
-                        <li> <Link href='/community'>Foodies Community</Link></li>
+                        <li>
+                            <NavLink href='/meals'>Browse Meals</NavLink>
+                        </li>
+                        <li>
+                            <NavLink href='/community'>Foodies Community</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </header >
